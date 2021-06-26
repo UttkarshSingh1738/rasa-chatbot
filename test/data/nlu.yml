@@ -24,6 +24,7 @@ nlu:
     - How can you power my business using AI?
     - Tell me about yourself.
     - Tell me about your company.
+    - Tell me about ResoluteAI
 - intent: info/products-info
   examples: |
     - What are your products ?
@@ -44,7 +45,6 @@ nlu:
     - talk to agent
     - talk to associate.
     - speak to agent
-    
 - intent: goodbye
   examples: |
     - good afternoon
@@ -120,4 +120,11 @@ nlu:
     - Thanks
     - Thank you
     - Thanks alot
-
+    - No thanks
+- intent: info
+  examples: |
+    - your products?
+    - may i speak with an agent
+    - test test
+    - test organization
+    - uttkarsh.resoluteai@gmail.com
