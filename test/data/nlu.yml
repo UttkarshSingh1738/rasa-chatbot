@@ -16,7 +16,8 @@ nlu:
     - goodevening
     - good afternoon
     - Hey
-    - Rishabh
+    - Whats up
+    - yo
     - Hello
 - intent: company-profile
   examples: |
@@ -25,11 +26,19 @@ nlu:
     - Tell me about yourself.
     - Tell me about your company.
     - Tell me about ResoluteAI
+    - Where am I
+    - what is resoluteai
+    - what is this
+    - what can resoluteai do for me
+    - what is this?
 - intent: info/products-info
   examples: |
     - What are your products ?
     - What products do you have ?
     - What products do you provide ?
+    - What does your ccompany provide ?
+    - What does your company sell
+    - What does this company sell
     - Tell me about your products.
     - Tell me about your existing products.
 - intent: info/contact-prompt
@@ -40,6 +49,11 @@ nlu:
     - contact agent
     - get in touch with agent
     - agent contact
+    - I want to talk to a person
+    - I need to talk to the staff
+    - I need further assistance
+    - I have further queries
+    - who can i speak with
     - contact associate
     - contact
     - talk to agent
@@ -54,6 +68,7 @@ nlu:
     - good night
     - bye
     - goodbye
+    - ciao
     - have a nice day
     - see you around
     - bye bye
@@ -66,6 +81,8 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - yep
+    - yeah
 - intent: deny
   examples: |
     - no
@@ -74,6 +91,7 @@ nlu:
     - I don't think so
     - don't like that
     - no way
+    - nah
     - not really
     - Thank you
     - No
@@ -93,6 +111,7 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - \stop
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -109,6 +128,7 @@ nlu:
     - extremly sad
     - so saad
     - so sad
+    - i am not satisifed
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -123,8 +143,4 @@ nlu:
     - No thanks
 - intent: info
   examples: |
-    - your products?
-    - may i speak with an agent
-    - test test
-    - test organization
-    - uttkarsh.resoluteai@gmail.com
+    - what can this [company](company info) do for me?

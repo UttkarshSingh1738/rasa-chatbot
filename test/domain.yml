@@ -3,19 +3,20 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- goodbye
-- stop
-- greet
-- company-profile
-- thanking
 - info:
     is_retrieval_intent: true
+- company-profile
+- mood_unhappy
+- stop
+- mood_great
+- goodbye
+- greet
+- thanking
 - deny
 - affirm
-- mood_great
-- mood_unhappy
 - bot_challenge
 entities:
+- company info
 - email
 - name
 - organisation

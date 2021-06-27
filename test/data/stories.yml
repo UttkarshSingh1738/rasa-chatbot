@@ -108,7 +108,7 @@ stories:
   - action: utter_submit
   - action: utter_help_loop
 
-- story: interactive_story_1
+- story: interactive_story_3
   steps:
   - intent: info
   - action: client_info_form
@@ -132,7 +132,7 @@ stories:
   - action: utter_help_loop
 
 
-- story: interactive_story_1
+- story: interactive_story_4
   steps:
   - intent: greet
   - action: utter_company_greet
@@ -168,3 +168,15 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
   - intent: stop
+
+- story: interactive_story_5
+  steps:
+  - intent: company-profile
+  - action: utter_company_profile
+  - intent: info
+  - action: utter_info/products-info
+  - intent: company-profile
+  - action: utter_company_profile
+  - intent: stop
+  - intent: mood_great
+
