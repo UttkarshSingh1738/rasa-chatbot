@@ -3,15 +3,16 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- thanking
+- products-info
+- goodbye
+- greet
+- company-profile
 - info:
     is_retrieval_intent: true
-- company-profile
 - mood_unhappy
 - stop
 - mood_great
-- goodbye
-- greet
-- thanking
 - deny
 - affirm
 - bot_challenge
@@ -64,6 +65,7 @@ actions:
 - utter_company_greet
 - utter_company_profile
 - utter_goodbye
+- utter_greet
 - utter_happy
 - utter_help_loop
 - utter_info

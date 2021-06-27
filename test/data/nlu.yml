@@ -27,11 +27,14 @@ nlu:
     - Tell me about your company.
     - Tell me about ResoluteAI
     - Where am I
+    - what can this [company](company info) do for me?
     - what is resoluteai
     - what is this
     - what can resoluteai do for me
     - what is this?
-- intent: info/products-info
+    - what do you offer?
+    - yo what is this
+- intent: products-info
   examples: |
     - What are your products ?
     - What products do you have ?
@@ -39,9 +42,11 @@ nlu:
     - What does your ccompany provide ?
     - What does your company sell
     - What does this company sell
+    - Waht does this company have to offer?
     - Tell me about your products.
     - Tell me about your existing products.
-- intent: info/contact-prompt
+    - what does your company sell?
+- intent: contact-prompt
   examples: |
     - How do I contact an associate?
     - Put me in touch with your agent.
@@ -73,6 +78,7 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - see ya
 - intent: affirm
   examples: |
     - yes
@@ -141,6 +147,5 @@ nlu:
     - Thank you
     - Thanks alot
     - No thanks
-- intent: info
-  examples: |
-    - what can this [company](company info) do for me?
+    - okay thanks
+    - okay thank you

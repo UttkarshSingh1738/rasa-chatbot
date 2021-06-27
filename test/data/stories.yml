@@ -2,33 +2,33 @@ version: "2.0"
 
 stories:
 
-# - story: happy path
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: mood_great
-#   - action: utter_happy
+ - story: happy path
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: mood_great
+   - action: utter_happy
 
-- story: converse
-  steps:
-  - intent: greet
-  - action: utter_company_greet
-  - intent: company-profile
-  - action: utter_company_profile
-  - checkpoint: pick_route
+ - story: converse
+   steps:
+   - intent: greet
+   - action: utter_company_greet
+   - intent: company-profile
+   - action: utter_company_profile
+   - checkpoint: pick_route
 
-- story: agent_contact
-  steps:
-  - checkpoint: pick_route
-  - intent: info
-  - action: action_client_info_form
-  - active_loop: action_client_info_form
+ - story: agent_contact
+   steps:
+   - checkpoint: pick_route
+   - intent: info
+   - action: action_client_info_form
+   - active_loop: action_client_info_form
   
-- story: products
-  steps:
-  - checkpoint: pick_route
-  - intent: info
-  - action: utter_info
+ - story: products
+   steps:
+   - checkpoint: pick_route
+   - intent: info
+   - action: utter_info
 
   
 
@@ -52,131 +52,153 @@ stories:
 #   - intent: deny
 #   - action: utter_goodbye
 
-- story: interactive_story_1
-  steps:
-  - intent: greet
-  - action: utter_company_greet
-  - intent: company-profile
-  - action: utter_company_profile
-  - intent: info
-  - action: client_info_form
-  - active_loop: client_info_form
-  - slot_was_set:
-    - requested_slot: name
-  - slot_was_set:
-    - name: Rishabh
-  - slot_was_set:
-    - requested_slot: organisation
-  - slot_was_set:
-    - organisation: ABCompany
-  - slot_was_set:
-    - requested_slot: email
-  - slot_was_set:
-    - email: email@abcompany.com
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: utter_submit
+ - story: interactive_story_1
+   steps:
+   - intent: greet
+   - action: utter_company_greet
+   - intent: company-profile
+   - action: utter_company_profile
+   - intent: info
+   - action: client_info_form
+   - active_loop: client_info_form
+   - slot_was_set:
+     - requested_slot: name
+   - slot_was_set:
+     - name: Rishabh
+   - slot_was_set:
+     - requested_slot: organisation
+   - slot_was_set:
+     - organisation: ABCompany
+   - slot_was_set:
+     - requested_slot: email
+   - slot_was_set:
+     - email: email@abcompany.com
+   - slot_was_set:
+     - requested_slot: null
+   - active_loop: null
+   - action: utter_submit
 
 
-- story: interactive_story_2
-  steps:
-  - intent: greet
-  - action: utter_company_greet
-  - intent: company-profile
-  - action: utter_company_profile
-  - intent: info
-  - action: utter_info/products-info
-  - intent: info
-  - action: client_info_form
-  - active_loop: client_info_form
-  - slot_was_set:
-    - requested_slot: name
-  - slot_was_set:
-    - name: Rishabh
-  - slot_was_set:
-    - requested_slot: organisation
-  - slot_was_set:
-    - organisation: New Corp
-  - slot_was_set:
-    - requested_slot: email
-  - slot_was_set:
-    - email: email@email.com
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: utter_submit
-  - action: utter_help_loop
+ - story: interactive_story_2
+   steps:
+   - intent: greet
+   - action: utter_company_greet
+   - intent: company-profile
+   - action: utter_company_profile
+   - intent: info
+   - action: utter_info/products-info
+   - intent: info
+   - action: client_info_form
+   - active_loop: client_info_form
+   - slot_was_set:
+     - requested_slot: name
+   - slot_was_set:
+     - name: Rishabh
+   - slot_was_set:
+     - requested_slot: organisation
+   - slot_was_set:
+     - organisation: New Corp
+   - slot_was_set:
+     - requested_slot: email
+   - slot_was_set:
+     - email: email@email.com
+   - slot_was_set:
+     - requested_slot: null
+   - active_loop: null
+   - action: utter_submit
+   - action: utter_help_loop
 
-- story: interactive_story_3
-  steps:
-  - intent: info
-  - action: client_info_form
-  - active_loop: client_info_form
-  - slot_was_set:
-    - requested_slot: name
-  - slot_was_set:
-    - name: Rishabh
-  - slot_was_set:
-    - requested_slot: organisation
-  - slot_was_set:
-    - organisation: ogcorp
-  - slot_was_set:
-    - requested_slot: email
-  - slot_was_set:
-    - email: rishabh.resoluteai@gmail.com
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: utter_submit
-  - action: utter_help_loop
+ - story: interactive_story_3
+   steps:
+   - intent: info
+   - action: client_info_form
+   - active_loop: client_info_form
+   - slot_was_set:
+     - requested_slot: name
+   - slot_was_set:
+     - name: Rishabh
+   - slot_was_set:
+     - requested_slot: organisation
+   - slot_was_set:
+     - organisation: ogcorp
+   - slot_was_set:
+     - requested_slot: email
+   - slot_was_set:
+     - email: rishabh.resoluteai@gmail.com
+   - slot_was_set:
+     - requested_slot: null
+   - active_loop: null
+   - action: utter_submit
+   - action: utter_help_loop
 
 
-- story: interactive_story_4
-  steps:
-  - intent: greet
-  - action: utter_company_greet
-  - intent: company-profile
-  - action: utter_company_profile
-  - intent: info
-  - action: utter_info/products-info
-  - intent: info
-  - action: client_info_form
-  - active_loop: client_info_form
-  - slot_was_set:
-    - requested_slot: name
-  - action: action_client_info_form
-  - intent: info
-  - action: client_info_form
-  - slot_was_set:
-    - name: test test
-  - slot_was_set:
-    - requested_slot: organisation
-  - slot_was_set:
-    - organisation: test organization
-  - slot_was_set:
-    - requested_slot: email
-  - slot_was_set:
-    - email: uttkarsh.resoluteai@gmail.com
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: utter_submit
-  - action: utter_help_loop
-  - intent: thanking
-  - action: utter_goodbye
-  - intent: goodbye
-  - action: utter_goodbye
-  - intent: stop
+ - story: interactive_story_4
+   steps:
+   - intent: greet
+   - action: utter_company_greet
+   - intent: company-profile
+   - action: utter_company_profile
+   - intent: info
+   - action: utter_info/products-info
+   - intent: info
+   - action: client_info_form
+   - active_loop: client_info_form
+   - slot_was_set:
+     - requested_slot: name
+   - action: action_client_info_form
+   - intent: info
+   - action: client_info_form
+   - slot_was_set:
+     - name: test test
+   - slot_was_set:
+     - requested_slot: organisation
+   - slot_was_set:
+     - organisation: test organization
+   - slot_was_set:
+     - requested_slot: email
+   - slot_was_set:
+     - email: uttkarsh.resoluteai@gmail.com
+   - slot_was_set:
+     - requested_slot: null
+   - active_loop: null
+   - action: utter_submit
+   - action: utter_help_loop
+   - intent: thanking
+   - action: utter_goodbye
+   - intent: goodbye
+   - action: utter_goodbye
+   - intent: stop
 
-- story: interactive_story_5
-  steps:
-  - intent: company-profile
-  - action: utter_company_profile
-  - intent: info
-  - action: utter_info/products-info
-  - intent: company-profile
-  - action: utter_company_profile
-  - intent: stop
-  - intent: mood_great
+ - story: interactive_story_5
+   steps:
+   - intent: company-profile
+   - action: utter_company_profile
+   - intent: info
+   - action: utter_info/products-info
+   - intent: company-profile
+   - action: utter_company_profile
+   - intent: stop
+   - intent: mood_great
 
+
+ - story: interactive_story_6
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: company-profile
+   - action: utter_company_profile
+   - intent: thanking
+   - action: utter_help_loop
+   - intent: goodbye
+   - action: utter_goodbye
+
+
+ - story: interactive_story_2
+   steps:
+   - intent: company-profile
+   - action: utter_company_profile
+   - intent: products-info
+   - action: utter_info/products-info
+   - intent: thanking
+   - intent: goodbye
+   - action: utter_goodbye
