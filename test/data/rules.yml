@@ -4,13 +4,15 @@ rules:
 
 - rule: submit
   condition:
-  - active_loop: action_client_info_form
+  - active_loop: client_info_form
   steps:
-  - action: action_client_info_form
+  - action: client_info_form
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
-  - action: utter_submit 
+  - action: action_client_info_form
+  - action: utter_help_loop
+
 
 # - rule: Say `hello` whenever the user sends a message with intent `greet`
 #   conversation_start: true

@@ -3,12 +3,13 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- deny
+- affirm
 - info:
     is_retrieval_intent: true
-- affirm
-- company-profile
 - greet
+- company-profile
+- give_details
+- deny
 - goodbye
 - mood_great
 - mood_unhappy
@@ -53,7 +54,7 @@ responses:
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
   utter_submit:
-  - text: An agent will get in touch with you shortly
+  - text: An agent will get in touch with you shortly, {name}.
   utter_help_loop:
   - text: Is there anything else I can help you with ?
 actions:
@@ -62,10 +63,8 @@ actions:
 - utter_company_profile
 - utter_happy
 - utter_help_loop
-- utter_info
 - utter_info/contact-prompt
 - utter_info/products-info
-- utter_submit
 forms:
   client_info_form:
     required_slots:

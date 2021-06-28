@@ -24,6 +24,7 @@ nlu:
     - How can you power my business using AI?
     - Tell me about yourself.
     - Tell me about your company.
+    - what services do you provide?
 - intent: info/products-info
   examples: |
     - What are your products ?
@@ -44,7 +45,6 @@ nlu:
     - talk to agent
     - talk to associate.
     - speak to agent
-    
 - intent: goodbye
   examples: |
     - good afternoon
@@ -66,6 +66,8 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - org
+    - mail@mail.com
 - intent: deny
   examples: |
     - no
@@ -121,3 +123,8 @@ nlu:
     - Thank you
     - Thanks alot
 
+- intent: give_details
+  examples: |
+    - Rishabh
+    - organisation
+    - rishabh@gmail.com

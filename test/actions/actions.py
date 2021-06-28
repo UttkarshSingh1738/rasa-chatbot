@@ -41,10 +41,10 @@ class clientinfo(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        name = tracker.get_slot('name')
-        org = tracker.get_slot('organisation')
-        email = tracker.get_slot('email')
+        nameslot = tracker.get_slot('name')
+        orgslot = tracker.get_slot('organisation')
+        emailslot = tracker.get_slot('email')
 
-        dispatcher.utter_message(text="Thank you, {name} for providing us with your contact info.")
+        dispatcher.utter_message(response="utter_submit", name=nameslot)
 
         return []
