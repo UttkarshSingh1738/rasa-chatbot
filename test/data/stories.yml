@@ -20,27 +20,40 @@ stories:
 - story: agent_contact
   steps:
   - checkpoint: pick_route
-  - intent: info
+  - intent: contact-prompt
+  - action: utter_contact-prompt
   - action: client_info_form
   - active_loop: client_info_form
   
 - story: products
   steps:
   - checkpoint: pick_route
-  - intent: info
-  - action: utter_info/products-info
+  - intent: products-info
+  - action: utter_products-info
   
 - story: contact
   steps:
-  - intent: info
+  - intent: contact-prompt
+  - action: utter_contact-prompt
   - action: client_info_form
   - active_loop: client_info_form
 
 - story: product
   steps:
-  - intent: info
-  - action: utter_info/products-info
-  
+  - intent: products-info
+  - action: utter_products-info
+
+- story: helplooppoplus
+  steps:
+  - action: utter_help_loop
+  - intent: deny
+  - action: utter_goodbye
+
+- story: helploopminus
+  steps:
+  - action: utter_help_loop
+  - intent: affirm
+  - action: utter_doubt
 
 # - story: sad path 1
 #   steps:
@@ -68,9 +81,9 @@ stories:
   - action: utter_company_greet
   - intent: company-profile
   - action: utter_company_profile
-  - intent: info
-  - action: utter_info/products-info
-  - intent: info
+  - intent: products-info
+  - action: utter_products-info
+  - intent: contact-prompt
   - action: client_info_form
   - active_loop: client_info_form
   - slot_was_set:

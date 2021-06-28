@@ -4,8 +4,8 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - affirm
-- info:
-    is_retrieval_intent: true
+- contact-prompt
+- products-info
 - greet
 - company-profile
 - give_details
@@ -35,12 +35,12 @@ responses:
   - text: Hey! How are you?
   utter_company_profile:
   - text: We provide dynamic solutions powered by Artificial Intelligence that fit your business related problem statement. Feel free to check out FaceGenie, which sits at the pinnacle of ResoluteAI powered solutions due to its wide array of application in various industries along with a high level of flexibility in its implementation. Would you like to contact an agent or find out more about our products?
-  utter_info/contact-prompt:
+  utter_contact-prompt:
   - text: Please provide us with your contact details.
-  utter_info/products-info:
+  utter_products-info:
   - text: One of our most sought after products is the FaceGenie that helps maintain hygiene and reinforce SOP in your organisation. We provide customised Virtual Assistance to hold the fort in your absence and help you achieve client retention.
   utter_ask_name:
-  - text: Please provide us with the following details. What is your name?
+  - text: What is your name?
   utter_ask_organisation:
   - text: What is the name of your organisation?
   utter_ask_email:
@@ -50,21 +50,23 @@ responses:
   utter_happy:
   - text: Great, carry on!
   utter_goodbye:
-  - text: goodbye
+  - text: Okay. Feel free to text me if you require my assistance.
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
   utter_submit:
   - text: An agent will get in touch with you shortly, {name}.
   utter_help_loop:
   - text: Is there anything else I can help you with ?
+  utter_doubt:
+  - text: What can I help you with?
 actions:
 - action_client_info_form
 - utter_company_greet
 - utter_company_profile
 - utter_happy
 - utter_help_loop
-- utter_info/contact-prompt
-- utter_info/products-info
+- utter_contact-prompt
+- utter_products-info
 forms:
   client_info_form:
     required_slots:

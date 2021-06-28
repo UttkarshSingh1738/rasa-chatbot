@@ -25,14 +25,14 @@ nlu:
     - Tell me about yourself.
     - Tell me about your company.
     - what services do you provide?
-- intent: info/products-info
+- intent: products-info
   examples: |
     - What are your products ?
     - What products do you have ?
     - What products do you provide ?
     - Tell me about your products.
     - Tell me about your existing products.
-- intent: info/contact-prompt
+- intent: contact-prompt
   examples: |
     - How do I contact an associate?
     - Put me in touch with your agent.
